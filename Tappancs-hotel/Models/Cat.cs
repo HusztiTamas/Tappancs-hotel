@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Tappancs_hotel.Models
+{
+    public class Cat : Pet
+    {
+        public Cat(string name) : base(name, "Macska", "😺")
+        {
+        }
+        public override string Speak()
+        {
+            return "Miau-miau!";
+        }
+        public override string Play()
+        {
+            ChangeStats(-8, 20, -10);
+            return $"{Name} a fonalgombolyaggal játszott! + 20 jókedv";
+        }
+    }
+}
